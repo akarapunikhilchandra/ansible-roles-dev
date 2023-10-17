@@ -1,5 +1,5 @@
 app_version: "1.0.0"
-nexus_url: 
-group_id: 
-nexus_username:
-nexus_password: 
+nexus_url: http://3.80.192.89:8081/repository
+group_id: "com/roboshop"
+nexus_username: admin
+nexus_password: admin123
