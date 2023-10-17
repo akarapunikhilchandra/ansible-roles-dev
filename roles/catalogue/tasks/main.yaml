@@ -13,10 +13,10 @@
   args:   
     chdir: /app
 
-- name: loading schema
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: load-mongodb-schema
+# - name: loading schema
+#   ansible.builtin.import_role:
+#     name: common
+#     tasks_from: load-mongodb-schema
 
 - name: restarting service
   ansible.builtin.import_role:
