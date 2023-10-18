@@ -1,25 +1,31 @@
-- name: insatlling and setting npm source
+# I need to refer nodejs tasks in common folder
+# catalogue is one role
+# common is also another role
+# I need to import a task nodejs.yaml in catalogue
+- name: print app version
+  debug:
+    msg: "APP Version is: {{app_version}}"
+- name: Install NodeJS
   ansible.builtin.import_role:
     name: common
     tasks_from: nodejs
 
-- name: settup application
+- name: SetUp Application
   ansible.builtin.import_role:
     name: common
-    tasks_from: appsetup
-    
+    tasks_from: app-setup
+
 - name: install dependencies
   ansible.builtin.command: npm install
-  args:   
+  args:
     chdir: /app
-
-# - name: loading schema
+# we are doing this as part of mongoDB itself
+# - name: Load Schema
 #   ansible.builtin.import_role:
 #     name: common
-#     tasks_from: load-mongodb-schema
+#     tasks_from: load-mongo-schema
 
-- name: restarting service
+- name: Start application
   ansible.builtin.import_role:
     name: common
     tasks_from: systemd-setup
-
