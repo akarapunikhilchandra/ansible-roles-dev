@@ -40,6 +40,6 @@
 
 - name: extract {{component}} artifact
   ansible.builtin.unarchive:
-    src: "/app/{{component}}-{{app_version}}.zip"
+    src: "/app/catalogue-1.0.1.zip"
     dest: "/app"
     remote_src: yes
