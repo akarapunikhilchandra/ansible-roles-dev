@@ -1,4 +1,4 @@
-app_version: "1.2.0"
+app_version: "1.3.0"
 nexus_url: http://34.239.42.49/repository
 group_id: "com/roboshop"
 nexus_username: admin
