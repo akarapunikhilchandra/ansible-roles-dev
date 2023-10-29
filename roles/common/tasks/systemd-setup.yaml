@@ -6,14 +6,11 @@
   ansible.builtin.template:
     src: "{{component}}.service"
     dest: /etc/systemd/system/{{component}}.service
-
-
-- name: daemon reload
+- name: deamon reload
   ansible.builtin.systemd:
     daemon_reload: true
-
 - name: restart {{component}}
   ansible.builtin.service:
     name: "{{component}}"
+    enabled: yes
     state: restarted
-    enabled: true
