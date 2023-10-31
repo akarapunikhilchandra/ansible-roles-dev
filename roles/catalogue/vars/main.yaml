@@ -3,4 +3,4 @@ nexus_url: http://3.85.195.206:8081/repository
 group_id: "com/roboshop"
 nexus_username: admin
 nexus_password: admin123
-env: dev
+env: prod
